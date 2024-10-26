@@ -1,38 +1,44 @@
 .App {
-  text-align: center;
+    text-align: center;
+    margin-top: 20px;
+    display: flex; /* Menggunakan flexbox untuk pemusatan */
+    flex-direction: column; /* Mengatur arah flex ke kolom */
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center; /* Memusatkan secara vertikal */
+    height: 100vh; /* Menggunakan tinggi penuh viewport */
+    background-color: #f0f0f0; /* Warna latar belakang jika diinginkan */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    margin-bottom: 20px; /* Jarak antara judul dan papan permainan */
+    color: #333; /* Warna teks untuk judul */
+    font-size: 32px; /* Ukuran font judul */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.board {
+    display: inline-block;
+    background-color: blue; /* Menambahkan latar belakang biru */
+    padding: 10px; /* Ruang di dalam kotak */
+    border-radius: 8px; /* Membuat sudut kotak melengkung (opsional) */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.board-row {
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.square {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+    background-color: white; /* Warna latar belakang kotak permainan */
+    border: 2px solid #333; /* Border untuk kotak permainan */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
 }
